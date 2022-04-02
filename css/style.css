@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+:root {
+  --bg: rgb(213, 243, 204);
+  --blue-color: rgb(0, 204, 255);
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+/* header */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #010103;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+header .logo-image {
+  height: 5rem;
+  margin-left: 2rem;
+}
+
+header nav a {
+  color: white;
+  padding: 0.4rem;
+  text-transform: capitalize;
+  transition: none;
+}
+
+header nav a:hover {
+  color: var(--blue-color);
+  border-bottom: 0.1rem solid yellow;
+  border-top: 0.1rem solid yellow;
+  padding-bottom: 0.5rem;
+}
+
+header p.city {
+  font-size: 1.6rem;
+  color: yellow;
+  margin-right: 2rem;
+  text-transform: capitalize;
+}
+
+header p.city span {
+  color: var(--blue-color);
+}
+
+header .menu-btn {
+  height: 2rem;
+  background-color: white;
+  display: none;
+  border-radius: 15%;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+/* main section */
+
+/* media queries  */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgb(52, 59, 63);
+    width: 60%;
+    height: calc(100vh - 9.5rem);
+  }
+  .header .navbar.hide {
+    display: none;
+  }
+  .header .navbar a {
+    color: white;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .header .navbar a:hover {
+    background-color: rgb(15, 17, 19);
+    color: white;
+    margin-right: 0;
+    margin-left: 0;
+    border: none;
+  }
+
+  header .menu-btn {
+    display: inline-block;
+  }
+
+  header .menu-btn.rotate {
+    transform: rotate(90deg);
+  }
+
+  header .logo-image {
+    margin-left: 1rem;
+  }
+  header p.city {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 70%;
+  }
+}
