@@ -16,6 +16,12 @@
   transition: 0.2s linear;
 }
 
+html {
+  overflow-x: hidden;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg);
 }
@@ -27,6 +33,7 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: #010103;
+  height: 5rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -75,11 +82,183 @@ header .menu-btn {
 
 /* main section */
 
+/* home */
+section {
+  transition: 0.5s linear;
+}
+section.home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  background: url(../images/bg-image.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+section.home h1 {
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  margin-top: 9rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  color: rgb(52, 59, 63, 0.3);
+}
+
+section.home p {
+  position: absolute;
+  top: 6rem;
+  right: 3rem;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  color: rgb(52, 59, 63, 0.5);
+}
+
+/* about section*/
+section.about {
+  min-height: 100vh;
+  background-color: rgb(95, 99, 160);
+}
+
+/* history  section*/
+section.history {
+  min-height: 100vh;
+  background-color: violet;
+}
+
+section.history .slide-1 {
+  background-color: aqua;
+}
+
+section.history .slide-2 {
+  background-color: rgb(0, 17, 255);
+}
+section.history .slide-3 {
+  background-color: rgb(255, 230, 0);
+}
+section.history .slide-4 {
+  background-color: rgb(255, 51, 0);
+}
+
+section.history .slider {
+  max-width: 100rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+section.history .slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+}
+
+section.history .slider-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+section.history .slider-btn-left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+section.history .slider-btn-right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+section.history .dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+section.history .dots-dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots-dot:last-child {
+  margin: 0;
+}
+
+section.history .dots-dot-active {
+  background-color: #fff;
+  opacity: 1;
+}
+
+/*visit section*/
+
+section.visit {
+  min-height: 100vh;
+  background-color: yellowgreen;
+}
+section.events {
+  min-height: 100vh;
+  background-color: violet;
+}
+section.blogs {
+  min-height: 100vh;
+  background-color: rgb(130, 238, 130);
+}
+section.map {
+  min-height: 100vh;
+  background-color: violet;
+}
+section.contacts {
+  min-height: 100vh;
+  background-color: rgb(50, 20, 88);
+}
 /* media queries  */
+
+@media (max-width: 1350px) {
+  section.home {
+    background: url(../images/bg-image.jpg) no-repeat;
+    background-size: cover;
+    background-position: right;
+  }
+}
 
 @media (max-width: 991px) {
   html {
     font-size: 90%;
+  }
+
+  section.home {
+    background: url(../images/bg-image.jpg) no-repeat;
+    background-size: cover;
+    background-position: right;
   }
 }
 
@@ -91,6 +270,11 @@ header .menu-btn {
     background: rgb(52, 59, 63);
     width: 60%;
     height: calc(100vh - 9.5rem);
+  }
+  section.home {
+    background: url(../images/bg-image-2.jpg) no-repeat;
+    background-size: cover;
+    background-position: right;
   }
   .header .navbar.hide {
     display: none;
