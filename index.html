@@ -36,6 +36,35 @@
         <section id="about" class="about">
             <div>
                 <h1>about</h1>
+                <div class="city-compare-container">
+                  <div class="city-form-container">
+                    <h2>enter your city</h2>
+                    <form class="city-form">
+                      <input type="text"  class="form-input-city" id="country"/>
+                      <button class="city-btn">enter &rtrif;</button>
+                      <label class="city-label " for="country">city</label>
+                    </form>
+                  </div>
+                  <div class="compare-cities">
+                    <!-- <article class="city ${className}">
+                      <div class="city-data">
+                          <div class="city-data-header">
+                            <h3 class="city-name">${data[0]["name"]}</h3>
+                            <h4 class="city-country">${data[0].country}</h4>
+                          </div>
+                          <p class="city-row"><span><img src="/images/population.png" alt="population image"></span>${+(
+                            data[0].population / 1000000
+                          ).toFixed(3)} mil</p>
+                          <p class="city-row"><span><img src="/images/Latitude.svg" alt="latitude image"></span>${+data[0].latitude.toFixed(
+                            4
+                          )}</p>
+                          <p class="city-row"><span><img src="/images/Longitude.svg" alt="longitude image"></span>${+data[0].longitude.toFixed(
+                            4
+                          )}</p>         
+                      </div>
+                    </article> -->
+                  </div>
+                </div>
             </div>
         </section>
         <section id="history" class="history">
@@ -75,6 +104,7 @@
             </div>
         </section>
     </main>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="/js/script.js"></script>
   </body>
 </html>

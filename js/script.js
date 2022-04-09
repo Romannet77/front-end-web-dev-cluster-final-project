@@ -3,6 +3,9 @@ const menuBtn = document.querySelector(".menu-btn");
 const navbar = document.querySelector(".navbar");
 const main = document.querySelector("main");
 
+const inputCity = document.querySelector(".form-input-city");
+const buttonSubmitCity = document.querySelector(".city-btn ");
+
 //menu button events:
 
 menuBtn.addEventListener("click", function () {
@@ -113,3 +116,104 @@ const slider = function () {
 };
 
 slider();
+
+// Compare cities REST API
+
+const cityContainer = document.querySelector(".compare-cities");
+
+const renderError = function (msg, className = "") {
+  const html = `
+      <div class="city-error-message ${className}">
+        <p>${msg}</p>
+      </div> `;
+
+  cityContainer.insertAdjacentHTML("beforeend", html);
+};
+
+const renderCity = function (data, className = "") {
+  const html = `
+    <article class="city ${className}">
+      <div class="city-data">
+          <div class="city-data-header">
+            <h3 class="city-name">${data[0]["name"]}</h3>
+            <h4 class="city-country">${data[0].country}</h4>
+          </div>
+          <p class="city-row"><span><img src="/images/population.png" alt="population image"></span>${+(
+            data[0].population / 1000000
+          ).toFixed(3)} mil</p>
+          <p class="city-row"><span><img src="/images/latitude.svg" alt="latitude image"></span>${+data[0].latitude.toFixed(
+            4
+          )}</p>
+          <p class="city-row"><span><img src="/images/longitude.svg" alt="longitude image"></span>${+data[0].longitude.toFixed(
+            4
+          )}</p>         
+      </div>
+    </article>`;
+  cityContainer.insertAdjacentHTML("beforeend", html);
+};
+
+const getCountryData = function () {
+  $.ajax({
+    method: "GET",
+    url: "https://api.api-ninjas.com/v1/city?name=ivano-frankivsk",
+    headers: { "X-Api-Key": "J9s0PqEQ7OEn1qkKJfMKfA==bnKY5kXvCdcXResC" },
+    contentType: "application/json",
+    success: function (result) {
+      console.log(result);
+      renderCity(result);
+    },
+    error: function ajaxError(jqXHR) {
+      console.error("Error: ", jqXHR.responseText);
+
+      renderError(
+        `Something went wrong! "Error: ", ${jqXHR.responseText} Try again!`
+      );
+    },
+  });
+
+  inputCity.value = "";
+};
+
+getCountryData();
+
+buttonSubmitCity.addEventListener("click", function (e) {
+  e.preventDefault();
+  const city = inputCity.value;
+
+  const cityAfterChoice = document.querySelector(".afterChoice");
+
+  const cityErrorMassage = document.querySelector(".city-error-message");
+
+  if (cityAfterChoice) {
+    cityAfterChoice.remove();
+  }
+
+  if (cityErrorMassage) {
+    cityErrorMassage.remove();
+  }
+
+  $.ajax({
+    method: "GET",
+    url: "https://api.api-ninjas.com/v1/city?name=" + city,
+    headers: { "X-Api-Key": "J9s0PqEQ7OEn1qkKJfMKfA==bnKY5kXvCdcXResC" },
+    contentType: "application/json",
+    success: function (result) {
+      if (result.length === 0) {
+        renderError(
+          `Something went wrong! The city doesn't exist! Try again!`,
+          "city-error-message"
+        );
+      } else {
+        renderCity(result, "afterChoice");
+      }
+    },
+    error: function ajaxError(jqXHR) {
+      renderError(
+        `Something went wrong! "Error: ". ${jqXHR.responseText} Try again!`,
+        "city-error-message"
+      );
+    },
+  });
+
+  inputCity.value = "";
+});
