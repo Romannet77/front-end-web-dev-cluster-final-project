@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Ivano Frankivsk</title>
     <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="">
+    </script>
   </head>
   <body>
     <header class="header">
-      <a href="#coatOfArms" class="logo">
-        <img src="/images/Ivano-Frankivsk_COA.png" alt="logo image" class="logo-image"/>
+      <a href="#home" class="logo">
+        <img src="/images/if-if-small-coat-of-arms.png" alt="logo image" class="logo-image"/>
       </a>
       <nav class="navbar hide">       
           <a href="#home" class="nav-links">home</a>
@@ -20,21 +23,21 @@
           <a href="#visit" class="nav-links">visit</a>
           <a href="#events" class="nav-links">events</a>
           <a href="#blogs" class="nav-links">blogs</a>
-          <a href="#map" class="nav-links">map</a>
-          <a href="#contacts" class="nav-links">contacts</a>
+          <a href="#mapCity" class="nav-links">map</a>
+          <a href="#gallery" class="nav-links">gallery</a>
       </nav>
-      <p class="city">ivano <span>frankivsk</span></p>
+      <p class="city"><a href="#home">ivano <span>frankivsk</span></a></p>
       <img src="/images/menu-btn.png" alt="menu button" class="menu-btn">
     </header>
     <main class="main-content">
         <section id="home" class ="home">
             <div>
-                <h1>The Best <br> Place <br> to Visit</h1>
-            </div>
-            <p>1662</p>
+              <h1>1662</h1>
+              <p>The Best<br>Place<br>to Visit</p>
+            </div>           
         </section>
         <section id="about" class="about">
-            <div>
+            <div> 
                 <h1>about</h1>
                 <div class="city-compare-container">
                   <div class="city-form-container">
@@ -45,42 +48,129 @@
                       <label class="city-label " for="country">city</label>
                     </form>
                   </div>
-                  <div class="compare-cities">
-                    <!-- <article class="city ${className}">
-                      <div class="city-data">
-                          <div class="city-data-header">
-                            <h3 class="city-name">${data[0]["name"]}</h3>
-                            <h4 class="city-country">${data[0].country}</h4>
-                          </div>
-                          <p class="city-row"><span><img src="/images/population.png" alt="population image"></span>${+(
-                            data[0].population / 1000000
-                          ).toFixed(3)} mil</p>
-                          <p class="city-row"><span><img src="/images/Latitude.svg" alt="latitude image"></span>${+data[0].latitude.toFixed(
-                            4
-                          )}</p>
-                          <p class="city-row"><span><img src="/images/Longitude.svg" alt="longitude image"></span>${+data[0].longitude.toFixed(
-                            4
-                          )}</p>         
-                      </div>
-                    </article> -->
+                  <div>
+                    <div class="compare-cities">
+                      <!-- <article class="city ${className}">
+                        <div class="city-data">
+                            <div class="city-data-header">
+                              <h3 class="city-name">${data[0]["name"]}</h3>
+                              <h4 class="city-country">${data[0].country}</h4>
+                            </div>
+                            <p class="city-row"><span><img src="/images/population.png" alt="population image"></span>${+(
+                              data[0].population / 1000000
+                            ).toFixed(3)} mil</p>
+                            <p class="city-row"><span><img src="/images/Latitude.svg" alt="latitude image"></span>${+data[0].latitude.toFixed(
+                              4
+                            )}</p>
+                            <p class="city-row"><span><img src="/images/Longitude.svg" alt="longitude image"></span>${+data[0].longitude.toFixed(
+                              4
+                            )}</p>         
+                        </div>
+                      </article> -->
+                    </div>
                   </div>
                 </div>
             </div>
         </section>
         <section id="history" class="history">
           <div class="slider">
-            <div class="slide slide-1" style="transform: translateX(0%);"></div>
-            <div class="slide slide-2" style="transform: translateX(100%);"></div>
-            <div class="slide slide-3" style="transform: translateX(200%);"></div>
-            <div class="slide slide-4" style="transform: translateX(300%);"></div>
+            <div class="slide slide-1">
+              <div class="content history-content-1">
+                <div class="history-img-container">
+                  <div>
+                    <img src="/images/history-images/Stanisław_Rewera_Potocki.jpeg" alt="Stanisław Rewera Potocki img">
+                    <p>Stanisław Rewera Potocki</p>
+                  </div>
+                  <div>
+                    <img src="/images/history-images/Andrzej_Potocki_(d._1691).png" alt="Andrzej Potocki img">
+                    <p>Andrzej Potocki</p>
+                  </div>
+                  <div>
+                    <img src="/images/history-images/275px-Stanisław_Potocki_(1659-1683).png" alt="Stanisław Potocki img">
+                    <p>Stanisław Potocki</p>
+                  </div>
+                </div>
+                <div class="history-text">
+                  <h3>establishment</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slide slide-2">
+              <div class="content history-content-2">
+                <div class="history-img-container">
+                  <div>
+                    <a href="/images/history-images/Stanisław_Rewera_Potocki.jpeg">                    <img src="/images/history-images/Stanisław_Rewera_Potocki.jpeg" alt="Stanisław Rewera Potocki img">
+                    </a>
+                    <p>Stanisław Rewera Potocki</p>
+                  </div>
+                  <div>
+                    <img src="/images/history-images/Andrzej_Potocki_(d._1691).png" alt="Andrzej Potocki img">
+                    <p>Andrzej Potocki</p>
+                  </div>
+                </div>
+                <div class="history-text">
+                  <h3>establishment</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slide slide-3">
+              <div class="content history-content-3">
+                <div class="history-img-container">
+                  <div>
+                    <img src="/images/history-images/Stanisław_Potocki_(1659-1683).png" alt="Andrzej Potocki img">
+                    <p>Andrzej Potocki</p>
+                  </div>
+                </div>
+                <div class="history-text">
+                  <h3>establishment</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum officia sed voluptatibus dolore velit in voluptatem quia iure        nesciunt doloribus cum vel, quo blanditiis voluptatum ratione deserunt minima neque.       
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="slide slide-4">           
+            </div>
             <button class="slider-btn slider-btn-left" >&larr;</button>
             <button class="slider-btn slider-btn-right">&rarr;</button>
             <div class="dots"></div>
           </div>
         </section>
         <section id="visit" class="visit">
-            <div>
-                <h1>visit</h1>
+            <div class="visit-container">
             </div>
         </section>
         <section id="events" class="events">
@@ -93,16 +183,51 @@
                 <h1>blogs</h1>
             </div>
         </section>
-        <section id="map" class="map">
-            <div>
-                <h1>map</h1>
+        <div id="mapCity" class="mapCity">
+          <div id="map"></div>
+        </div>
+        <section id="gallery" class="gallery">
+          <div class="gallery-slider">
+            <div class="gallery-slide slide-1">
+              <img src="/images/gallery/1.jpg" alt="1">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, molestiae!</p>              
             </div>
-        </section>
-        <section id="contacts" class="contacts">
-            <div>
-                <h1>contacts</h1>
+            <div class="gallery-slide slide-2">
+              <img src="/images/gallery/2.jpg" alt="1">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, molestiae!</p>  
             </div>
+            <div class="gallery-slide slide-3">
+              <img src="/images/gallery/3.jpg" alt="1">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, molestiae!</p>  
+            </div>
+            <div class="gallery-slide slide-4">
+              <img src="/images/gallery/4.jpg" alt="1">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, molestiae!</p>  
+            </div>
+            <button class="slider-btn gallery-slider-btn-left" >&larr;</button>
+            <button class="slider-btn gallery-slider-btn-right">&rarr;</button>
+            <div class="gallery-dots"></div>
+          </div>
         </section>
+        <footer>
+          <div class="links">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#history">history</a>
+            <a href="#visit">visit</a>
+            <a href="#events">events</a>
+            <a href="#blogs">blogs</a>
+            <a href="#mapCity">map</a>
+            <a href="#gallery">gallery</a>
+          </div>
+          <div class="conacts">
+            <a href="https://m.facebook.com/groups/2356695091303475/?tsid=0.6862604548793119&source=result" target="blank"><img src="/images/facebook.svg" alt="facebook icon"></a>
+            <a href="https://www.instagram.com/if.city/" target="blank"><img src="/images/instagram.svg" alt="instagram icon"></a>
+          </div>
+          <div class="author-info">
+            <p>&copy; 2022 Developed and Designed by <span><a href="#">Mr. Roman Yurchenko</a></span> | All Rights Reserved</p>
+          </div>
+        </footer>
     </main>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="/js/script.js"></script>
