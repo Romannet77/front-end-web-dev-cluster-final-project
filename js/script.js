@@ -1,6 +1,6 @@
-const logo = document.querySelector(".logo-image");
 const menuBtn = document.querySelector(".menu-btn");
 const navbar = document.querySelector(".navbar");
+const navLinks = document.querySelectorAll(".nav-links");
 const main = document.querySelector("main");
 
 const inputCity = document.querySelector(".form-input-city");
@@ -17,6 +17,13 @@ const images = document.querySelectorAll("img");
 menuBtn.addEventListener("click", function () {
   navbar.classList.toggle("hide");
   this.classList.toggle("rotate");
+});
+
+navLinks.forEach(function (link) {
+  link.addEventListener("click", function () {
+    navbar.classList.add("hide");
+    menuBtn.classList.remove("rotate");
+  });
 });
 
 // manipulating navbar by click on main section (optional code):
@@ -268,6 +275,12 @@ articleHeader.forEach(function (header) {
 
 // modal window for images
 
+const removeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+  modal.removeChild(modal.lastElementChild);
+};
+
 images.forEach(function (img) {
   img.addEventListener("click", function (e) {
     if (!e.target.classList.contains("stable")) {
@@ -280,21 +293,15 @@ images.forEach(function (img) {
 });
 
 btnCloseModal.addEventListener("click", function () {
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
-  modal.removeChild(modal.lastElementChild);
+  removeModal();
 });
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-    modal.classList.add("hidden");
-    overlay.classList.add("hidden");
-    modal.removeChild(modal.lastElementChild);
+    removeModal();
   }
 });
 
 overlay.addEventListener("click", function () {
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
-  modal.removeChild(modal.lastElementChild);
+  removeModal();
 });
