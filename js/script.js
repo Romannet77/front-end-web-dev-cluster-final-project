@@ -292,3 +292,9 @@ document.addEventListener("keydown", function (e) {
     modal.removeChild(modal.lastElementChild);
   }
 });
+
+overlay.addEventListener("click", function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+  modal.removeChild(modal.lastElementChild);
+});
