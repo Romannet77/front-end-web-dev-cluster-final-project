@@ -1002,6 +1002,9 @@ footer .author-info p a:hover {
     width: 100%;
   }
   section.gallery .slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 3.6rem;
     width: 3.6rem;
     font-size: 2rem;
