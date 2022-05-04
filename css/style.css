@@ -21,7 +21,6 @@
 html {
   overflow-x: hidden;
   scroll-padding-top: 4.9rem;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -798,7 +797,7 @@ footer .author-info p a:hover {
   padding: 5rem 6rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  transition: all 0.5s;
+  transition: all 1.5s;
 }
 
 .overlay {

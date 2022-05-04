@@ -66,13 +66,13 @@ const renderCity = function (data, className = "") {
             }</h3>
             <h4 class="city-country">${data[0].country}</h4>
           </div>
-          <p class="city-row"><span><img src="/images/population.png" alt="population image" class="compare-city"></span>${+(
+          <p class="city-row"><span><img src="images/population.png" alt="population image" class="compare-city"></span>${+(
             data[0].population / 1000000
           ).toFixed(3)} mil</p>
-          <p class="city-row"><span><img src="/images/latitude.svg" alt="latitude image" class="compare-city"></span>${+data[0].latitude.toFixed(
+          <p class="city-row"><span><img src="images/latitude.svg" alt="latitude image" class="compare-city"></span>${+data[0].latitude.toFixed(
             2
           )}</p>
-          <p class="city-row"><span><img src="/images/longitude.svg" alt="longitude image" class="compare-city"></span>${+data[0].longitude.toFixed(
+          <p class="city-row"><span><img src="images/longitude.svg" alt="longitude image" class="compare-city"></span>${+data[0].longitude.toFixed(
             2
           )}</p>
       </div>
