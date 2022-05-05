@@ -678,14 +678,11 @@ section.gallery .slider-btn {
   position: absolute;
   top: 50%;
   z-index: 5;
-  border: none;
-  background: rgba(255, 255, 255, 0.7);
-  font-family: inherit;
-  color: #333;
+  background: rgba(255, 255, 255);
+  opacity: 0.5;
   border-radius: 50%;
   height: 5.5rem;
   width: 5.5rem;
-  font-size: 3.25rem;
   cursor: pointer;
 }
 
@@ -935,6 +932,11 @@ footer .author-info p a:hover {
     justify-content: center;
     gap: 1rem;
   }
+
+  section.gallery .slider-btn {
+    height: 5rem;
+    width: 5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1001,23 +1003,19 @@ footer .author-info p a:hover {
   div.mapCity #map {
     width: 100%;
   }
+
   section.gallery .slider-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3.6rem;
-    width: 3.6rem;
-    font-size: 2rem;
-    cursor: pointer;
+    height: 4rem;
+    width: 4rem;
   }
-}
 
-section.gallery .gallery-slider-btn-left {
-  left: 8%;
-}
+  section.gallery .gallery-slider-btn-left {
+    left: 8%;
+  }
 
-section.gallery .gallery-slider-btn-right {
-  right: 8%;
+  section.gallery .gallery-slider-btn-right {
+    right: 8%;
+  }
 }
 
 @media (max-width: 600px) {
