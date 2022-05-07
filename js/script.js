@@ -17,21 +17,24 @@ const images = document.querySelectorAll("img");
 menuBtn.addEventListener("click", function () {
   navbar.classList.toggle("hide");
   this.classList.toggle("rotate");
+  navbar.classList.toggle("active");
 });
 
 navLinks.forEach(function (link) {
   link.addEventListener("click", function () {
     navbar.classList.add("hide");
     menuBtn.classList.remove("rotate");
+    navbar.classList.remove("active");
   });
 });
 
 // manipulating navbar by click on main section (optional code):
 
-/*main.addEventListener("click", function () {
+main.addEventListener("click", function () {
   navbar.classList.add("hide");
   menuBtn.classList.remove("rotate");
-});*/
+  navbar.classList.remove("active");
+});
 
 //page navigation (optional code):
 
@@ -284,7 +287,10 @@ const removeModal = function () {
 
 images.forEach(function (img) {
   img.addEventListener("click", function (e) {
-    if (!e.target.classList.contains("stable")) {
+    if (
+      !e.target.classList.contains("stable") &&
+      !navbar.classList.contains("active")
+    ) {
       const imageModal = `<img src=${img.src} alt=${img.alt}">`;
       modal.classList.remove("hidden");
       overlay.classList.remove("hidden");
