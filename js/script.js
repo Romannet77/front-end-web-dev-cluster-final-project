@@ -100,7 +100,6 @@ const getCountryData = function () {
       );
     },
   });
-
   inputCity.value = "";
 };
 
@@ -144,7 +143,6 @@ buttonSubmitCity.addEventListener("click", function (e) {
       );
     },
   });
-
   inputCity.value = "";
 });
 
