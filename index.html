@@ -17,16 +17,37 @@
         <img src="images/logo-if-small-coat-of-arms.png" alt="logo image" class="logo-image stable"/>
       </a>
       <nav class="navbar hide">       
-          <a href="#home" class="nav-links">home</a>
-          <a href="#about" class="nav-links">about</a>
-          <a href="#history" class="nav-links">history</a>
-          <a href="#articles" class="nav-links">articles</a>
-          <a href="#visit" class="nav-links">visit</a>
-          <a href="#events" class="nav-links">events</a>
-          <a href="#mapCity" class="nav-links">map</a>
-          <a href="#gallery" class="nav-links">gallery</a>
+          <a href="#home" class="nav-links en hidden-language">home</a>
+          <a href="#home" class="nav-links ua">головна</a>
+          <a href="#about" class="nav-links en hidden-language">about</a>
+          <a href="#about" class="nav-links ua">про</a>
+          <a href="#history" class="nav-links en hidden-language">history</a>
+          <a href="#history" class="nav-links ua">історія</a>
+          <a href="#articles" class="nav-links en hidden-language">articles</a>
+          <a href="#articles" class="nav-links ua">статті</a>
+          <a href="#visit" class="nav-links en hidden-language">visit</a>
+          <a href="#visit" class="nav-links ua">відвідай</a>
+          <a href="#events" class="nav-links en hidden-language">events</a>
+          <a href="#events" class="nav-links ua">події</a>
+          <a href="#mapCity" class="nav-links en hidden-language">map</a>
+          <a href="#mapCity" class="nav-links ua">мапа</a>
+          <a href="#gallery" class="nav-links en hidden-language">gallery</a>
+          <a href="#gallery" class="nav-links ua">галерея</a>
       </nav>
-      <p class="city"><a href="#home">ivano <span>frankivsk</span></a></p>
+      <div>
+        <p class="city en hidden-language"><a href="#home">ivano-<span>frankivsk</span></a></p>
+        <p class="city ua"><a href="#home">івано-<span>франківськ</span></a></p>
+        <div class="langauge-icon-container ">
+          <div class="ukrainian-language-container">
+            <img src="./images/ukraine.svg" alt="ukrainian language icon" class = "ukrainian-language-icon stable">
+            <p>ua</p>
+          </div>
+          <div class="english-language-container">
+            <img src="./images/english-flag.svg" alt="english language icon" class = "english-language-icon stable">
+            <p>en</p>
+          </div>
+        </div>
+      </div>
       <img src="images/menu-btn.png" alt="menu button" class="menu-btn stable">
     </header>
     <main class="main-content">
@@ -34,51 +55,62 @@
         <section id="home" class ="home">
             <div>
               <h2>1662</h2>
-              <p>Stanisławów</p>
+              <p class ="en hidden-language">Stanisławów</p>
+              <p class="ua">станіславів</p>
             </div>
             <div>
               <h2>1962</h2>
-              <p>ivano-frankivsk</p>
+              <p class="en hidden-language">ivano-frankivsk</p>
+              <p class="ua">івано-франківськ</p>
             </div>           
         </section>
 
         <section id="about" class="about">
-            <h2>about ivano-frankivsk</h2>
+            <h2 class="en hidden-language">about ivano-frankivsk</h2>
+            <h2 class="ua">про івано-франківськ</h2>
             <div class="about-container"> 
                 <div class="about-content-container">
                   <div class="img-city-flags-container">
                     <div>
                       <img src="images/i-f-city-flag.png" alt="city flag img">
-                      <p>Ivano-Frankivsk Flag</p>
+                      <p class="en hidden-language">Ivano-Frankivsk Flag</p>
+                      <p class="ua">Прапор Івано-Франківська</p>
                     </div>
                     <div>
                       <img src="images/if-big-coat-of-arms.png" alt="city big coat of arms img">
-                      <p>Ivano-Frankivsk Big Coat of Arms</p>
+                      <p class="en hidden-language">Ivano-Frankivsk Big Coat of Arms</p>
+                      <p class="ua">Великий герб міста</p>
                     </div>
                     <div id="coat">
                       <img src="images/i-f-small-coat-of-arms.png" alt="city small coat of arms img">
-                      <p>Ivano-Frankivsk Small Coat of Arms</p>
+                      <p class="en hidden-language">Ivano-Frankivsk Small Coat of Arms</p>
+                      <p class="ua">Малий герб міста</p>
                     </div>
                     <div>
                       <img src="images/i-f-former-coat-of-arms.svg" alt="former coat of arms img">
-                      <p>Former Coat of Arms During the II Polish Republic 10.03.1938</p>
+                      <p class="en hidden-language">Coat of Arms of the City During the II Polish Republic 10.03.1938</p>
+                      <p class="ua">Колишній герб міста часів ІІ Речі Посполитої 10.03.1938</p>
                     </div>
                     <div>
                       <img src="images/pilawa-coat-of-arms.png" alt="Pilawa coat of arms img">
-                      <p>Pilawa is a Polish Coat of Arms from 1385</p>
+                      <p class="en hidden-language">Pilawa is a Polish Coat of Arms from 1385</p>
+                      <p class="ua">Пилява — польський герб з 1385 року</p>
                     </div>
                   </div>
                   <div class="about-city-info-container">
-                    <p>
+                    <p class = "en hidden-language">
                       <span>Ivano-Frankivsk</span> is a city
                       <a href="#map"><span class="map-link">located</span></a> in the
                       southern part of <span>Western Ukraine</span> near the
                       <span>Carpathian Mountains</span>. It lies along two mountain
                       rivers: Bystrytsia Nadvirnyanska and Bystrytsia Solotvynska. It
                       is the administrative center of Ivano-Frankivsk Region and one
-                      of the three main centers of Halychyna. The <span>population</span> of
-                      Ivano-Frankivsk is about <span>237,000</span> and its area is
+                      of the three main centers of Halychyna. The population of
+                      Ivano-Frankivsk is about 237,000 and its area is
                       83.73 square kilometers.
+                    </p>
+                    <p class="ua"><span>Івано-Франківськ</span> – місто, <a href="#map"><span class="map-link">розташоване</span></a>
+                      в південній  частині <span>Західної України</span> поблизу <span>Карпатських гір</span>. Франківськ лежить вздовж двох гірських річок: Бистриці Надвірнянської та Бистриці Солотвинської. Місто є адміністративним центром Івано-Франківської області та одинм із трьох головних центрів Галичини. Населення Івано-Франківська становить близько 237 тисячі осіб, а його площа становить 83,73 квадратних кілометрів.   
                     </p>
                     <a href="#map"><img src="images/i-f-city-location-map.png" alt="city location-img" class="stable"/></a>
                     <p>
@@ -203,7 +235,7 @@
                           </tr>
                         </table>
                       </div>
-                      <p><span>Fairs, music and cultural festivals</span> are regularly held in Ivano-Frankivsk and its surroundings. From this city in Western Ukraine and from its railway station, a lot of tourists begin their <span>journey to the Ukrainian Carpathians</span>. Ivano-Frankivsk is one of the most popular tourist regions in Ukraine.
+                      <p><span>Fairs, music and cultural festivals</span> are regularly held in Ivano-Frankivsk and its surroundings. A lot of tourists begin their <span>journey to the Ukrainian Carpathians</span> from the city's railway station. Ivano-Frankivsk is one of the most popular tourist regions in Ukraine.
                       </p>
                       <p>The International <span>Airport Ivano-Frankivsk</span> provides maintenance of aircraft of all types and has a capacity of 400 passengers per hour.</p>
                       <p> Distances from Ivano-Frankivsk to the borders:
@@ -219,7 +251,8 @@
                 </div>
                 <div class="city-compare-container">
                   <div class="city-form-container">
-                    <h2>compare your city</h2>
+                    <h2 class="en hidden-language">compare your city</h2>
+                    <h2 class="ua">Порівняй своє місто</h2>
                     <form class="city-form">
                       <label class="city-label " for="country">city</label>
                       <input type="text"  class="form-input-city" id="country" placeholder="enter your city"/>
@@ -252,7 +285,8 @@
         </section>
 
         <section id="history" class="history">
-          <h2>history</h2>
+          <h2 class="en hidden-language">history</h2>
+          <h2 class="ua">історія</h2>
           <div class="history-container">                        
             <div class="history-content">
               <h3>establishment 1662</h3>                    
@@ -365,7 +399,8 @@
 
         <article id="articles" class="articles">
           <div>
-              <h2>articles</h2>
+              <h2 class="en hidden-language">articles about city</h2>
+              <h2 class="ua">статті про місто</h2>
           </div>
           <div class="articles-container">
             <div class="article-content-container">
@@ -399,7 +434,8 @@
         </article>
 
         <section id="visit" class="visit">
-          <h2>visit the best places</h2>
+          <h2 class="en hidden-language">visit the best places</h2>
+          <h2 class="ua">відвідай найкращі місця</h2>
           <div class="visit-container">
             <div class="visit-info">
               <div class="visit-img-container">
@@ -462,7 +498,8 @@
         </section>
 
         <section id="events" class="events">
-            <h2>events</h2>
+            <h2 class="en hidden-language">events</h2>
+            <h2 class="ua">події</h2>
             <div class="events-container">
               <div class="event-info">
                 <div class="event-image-container">
@@ -508,12 +545,14 @@
         </section>
 
         <section id="mapCity" class="mapCity">
-          <h2>map</h2>
+          <h2 class="en hidden-language">map</h2>
+          <h2 class="ua">мапа</h2>
           <div id="map"></div>
         </section>
 
         <section id="gallery" class="gallery">
-          <h2>gallery</h2>
+          <h2 class="en hidden-language">gallery</h2>
+          <h2 class="ua">галерея</h2>
           <div class="gallery-slider">
             <div class="gallery-slide slide-1">
               <img src="images/gallery/park-mickevycha.jpg" alt="mickevycha square img" class="stable">

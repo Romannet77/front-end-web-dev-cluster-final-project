@@ -310,3 +310,56 @@ document.addEventListener("keydown", function (e) {
 overlay.addEventListener("click", function () {
   removeModal();
 });
+
+/* adding language */
+
+const ukrLanguageIcon = document.querySelector(".ukrainian-language-container");
+
+const engLanguageIcon = document.querySelector(".english-language-container");
+
+const ukrLanguage = document.querySelectorAll(".ua");
+
+const engLanguage = document.querySelectorAll(".en");
+
+const header = document.querySelector(".header");
+
+// header.addEventListener("click", (e) => {
+//   console.log(e.target);
+//   if (e.target.classList.contains("ukrainian-language-container")) {
+//     console.log(1);
+//     ukrLanguage.forEach((el) => {
+//       el.classList.remove("hidden-language");
+//     });
+//     engLanguage.forEach((el) => {
+//       el.classList.add("hidden-language");
+//     });
+//   }
+
+//   if (e.target.classList.contains("english-language-container")) {
+//     console.log(2);
+//     ukrLanguage.forEach((el) => {
+//       el.classList.add("hidden-language");
+//     });
+//     engLanguage.forEach((el) => {
+//       el.classList.remove("hidden-language");
+//     });
+//   }
+// });
+
+ukrLanguageIcon.addEventListener("click", () => {
+  ukrLanguage.forEach((el) => {
+    el.classList.remove("hidden-language");
+  });
+  engLanguage.forEach((el) => {
+    el.classList.add("hidden-language");
+  });
+});
+
+engLanguageIcon.addEventListener("click", () => {
+  ukrLanguage.forEach((el) => {
+    el.classList.add("hidden-language");
+  });
+  engLanguage.forEach((el) => {
+    el.classList.remove("hidden-language");
+  });
+});
