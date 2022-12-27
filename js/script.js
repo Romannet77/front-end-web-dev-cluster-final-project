@@ -253,11 +253,12 @@ sliderGallery();
 const viewArticle = document.querySelectorAll(".open-article");
 const closeArticle = document.querySelectorAll(".close-article");
 const articleHeader = document.querySelectorAll(".article-header span");
-const articleContent = document.querySelector(".article-content");
 
 viewArticle.forEach(function (article) {
   article.addEventListener("click", function () {
-    this.nextElementSibling.classList.toggle("article-open");
+    this.closest("div.article-content-container")
+      .querySelector("div.article-content")
+      .classList.toggle("article-open");
   });
 });
 
@@ -322,29 +323,6 @@ const ukrLanguage = document.querySelectorAll(".ua");
 const engLanguage = document.querySelectorAll(".en");
 
 const header = document.querySelector(".header");
-
-// header.addEventListener("click", (e) => {
-//   console.log(e.target);
-//   if (e.target.classList.contains("ukrainian-language-container")) {
-//     console.log(1);
-//     ukrLanguage.forEach((el) => {
-//       el.classList.remove("hidden-language");
-//     });
-//     engLanguage.forEach((el) => {
-//       el.classList.add("hidden-language");
-//     });
-//   }
-
-//   if (e.target.classList.contains("english-language-container")) {
-//     console.log(2);
-//     ukrLanguage.forEach((el) => {
-//       el.classList.add("hidden-language");
-//     });
-//     engLanguage.forEach((el) => {
-//       el.classList.remove("hidden-language");
-//     });
-//   }
-// });
 
 ukrLanguageIcon.addEventListener("click", () => {
   ukrLanguage.forEach((el) => {
