@@ -559,10 +559,7 @@ p.close-article {
   cursor: pointer;
   font-size: 1rem;
   padding: 0.2rem 0;
-  width: max-content;
-}
-p.close-article {
-  width: 8.3rem;
+  max-width: max-content;
 }
 
 p.open-article:hover,
@@ -575,7 +572,7 @@ p.close-article:hover {
   text-align: justify;
 }
 
-article .article-open {
+article .article-close {
   display: none;
 }
 

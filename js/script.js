@@ -60,22 +60,21 @@ const renderError = function (msg, className = "") {
 };
 
 const renderCity = function (data, className = "") {
+  const { name, country, population, latitude, longitude } = data[0];
   const html = `
     <article class="city ${className}">
       <div class="city-data">
           <div class="city-data-header">
-            <h3 class// articleContent.classList.toggle("article-open");="city-name">${
-              data[0]["name"]
-            }</h3>
-            <h4 class="city-country">${data[0].country}</h4>
+            <h3 class="city-name">${name}</h3>
+            <h4 class="city-country">${country}</h4>
           </div>
           <p class="city-row"><span><img src="images/population.png" alt="population image" class="compare-city"></span>${+(
-            data[0].population / 1000000
+            population / 1000000
           ).toFixed(3)} mil</p>
-          <p class="city-row"><span><img src="images/latitude.svg" alt="latitude image" class="compare-city"></span>${+data[0].latitude.toFixed(
+          <p class="city-row"><span><img src="images/latitude.svg" alt="latitude image" class="compare-city"></span>${+latitude.toFixed(
             2
           )}</p>
-          <p class="city-row"><span><img src="images/longitude.svg" alt="longitude image" class="compare-city"></span>${+data[0].longitude.toFixed(
+          <p class="city-row"><span><img src="images/longitude.svg" alt="longitude image" class="compare-city"></span>${+longitude.toFixed(
             2
           )}</p>
       </div>
@@ -258,13 +257,13 @@ viewArticle.forEach(function (article) {
   article.addEventListener("click", function () {
     this.closest("div.article-content-container")
       .querySelector("div.article-content")
-      .classList.toggle("article-open");
+      .classList.toggle("article-close");
   });
 });
 
 closeArticle.forEach(function (article) {
   article.addEventListener("click", function () {
-    this.closest("div.article-content").classList.toggle("article-open");
+    this.closest("div.article-content").classList.toggle("article-close");
   });
 });
 
@@ -272,7 +271,7 @@ articleHeader.forEach(function (header) {
   header.addEventListener("click", function () {
     this.closest("div.article-content-container")
       .querySelector("div.article-content")
-      .classList.toggle("article-open");
+      .classList.toggle("article-close");
   });
 });
 
