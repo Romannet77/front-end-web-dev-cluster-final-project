@@ -794,7 +794,8 @@ footer .links {
   justify-content: center;
   padding: 2rem 0;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 footer .links a {
@@ -845,12 +846,12 @@ footer .contacts-container img {
 
 footer .contacts-container p.email {
   padding: 0.5rem;
-  color: rgb(60, 5, 70);
+  color: rgb(18, 2, 20);
 }
 
 footer .contacts-container p.contact-text {
   padding: 0.5rem;
-  color: rgb(60, 5, 70);
+  color: rgb(18, 2, 20);
   font-size: 1.7rem;
   font-weight: 400;
 }
