@@ -836,7 +836,7 @@ footer .contacts {
 
 footer .author-info p {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 1.5rem;
 }
 
@@ -852,7 +852,6 @@ footer .contacts-container p.email {
 footer .contacts-container p.contact-text {
   padding: 0.5rem;
   color: rgb(18, 2, 20);
-  font-size: 1.7rem;
   font-weight: 400;
 }
 
