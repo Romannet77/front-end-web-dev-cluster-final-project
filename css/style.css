@@ -969,11 +969,14 @@ footer .author-info p a:hover {
 @media (max-width: 879px) {
   .header .navbar {
     position: absolute;
+    overflow-y: scroll;
     top: 100%;
     right: 0;
+    right: -17px;
     background: rgb(52, 59, 63);
     width: 70%;
-    height: calc(100vh - 9.5rem);
+    /* height: calc(100vh - 9.5rem); */
+    height: 100vh;
   }
 
   .header .navbar.hide {
