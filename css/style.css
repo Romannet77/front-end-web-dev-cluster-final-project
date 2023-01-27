@@ -672,7 +672,7 @@ section.mapCity {
 }
 section.mapCity #map {
   height: 65vh;
-  width: 100%;
+  width: 80%;
   object-fit: cover;
   z-index: 0;
 }
@@ -1110,6 +1110,10 @@ footer .author-info p a:hover {
   .modal {
     width: 100%;
     height: auto;
+  }
+
+  section.mapCity #map {
+    width: 100%;
   }
 }
 
